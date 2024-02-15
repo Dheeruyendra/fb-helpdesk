@@ -24,8 +24,9 @@ const LoginPage = () => {
         try {
             const response = await axios.post('http://localhost:8000/api/login', user, { withCredentials: true });
             if (response.status === 200) {
+                localStorage.setItem("jwtToken", response.data.token);
                 alert('Login successful');
-                navigate('/dashboard');
+                navigate('/connectPage');
             }
         } catch (err) {
             alert('Error logging in');
