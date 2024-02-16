@@ -3,7 +3,7 @@ import './App.css';
 import SignUp from './pages/Signup';
 import Login from './pages/Login';
 import ConnectPage from './pages/connectPage';
-import DeleteDisconnect from './pages/DeleteDisconnect';
+import AgentMessage from './pages/Agent';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/connectPage" element={<ConnectPage />} />
-          <Route path="/deleteDisconnect" element={<DeleteDisconnect />} />
+          <Route path="/agent" element={<AgentMessage />} />
        </Routes>
     </div>
   );

@@ -41,7 +41,7 @@ const loginUser = async (req, res) => {
         const payload = { user: { id: user.id } };
         jwt.sign(payload, JWT_SECRET, { expiresIn: 360000 }, (err, token) => {
             if (err) throw err;
-            res.status(200).json({ message: "Login Successful", token });
+            res.status(200).json({ message: "Login Successful", token, tag : true });
         });
     } catch (err) {
         console.error(err.message);
